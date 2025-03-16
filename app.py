@@ -12,18 +12,14 @@ from langchain_groq import ChatGroq
 from langchain.chains import SequentialChain
 from langchain.chains import ConversationChain
 from langchain.chains.question_answering import load_qa_chain
-import os
-from dotenv import load_dotenv
-load_dotenv()
+
+
 working_dir=os.path.dirname(os.path.abspath(__file__))
 with st.sidebar:
     st.title("Chat Bot ")
     st.markdown('''
     ## about
-    This app is an Chatbot using :
-                Streamlit 
-                Langchain
-                Gemini
+    This app is an Chatbot
         ''')
     st.write("Made by Chirag Kaushik")
 
@@ -67,6 +63,7 @@ def main():
         #st.write(docs)
         llm = ChatGroq(
             model="llama-3.3-70b-versatile",
+            groq_api_key='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',
             temperature=0.7,
         )
             
