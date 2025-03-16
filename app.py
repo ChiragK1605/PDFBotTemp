@@ -44,8 +44,8 @@ def main():
     #st.write(chunks)
     
     
-        embeddings = HuggingFaceEmbeddings()
-        VectorStore=FAISS.from_texts(chunks, embedding=embeddings)
+    embeddings = HuggingFaceEmbeddings()
+    VectorStore=FAISS.from_texts(chunks, embedding=embeddings)
         
             #st.write(text)
 
